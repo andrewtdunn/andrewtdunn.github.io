@@ -1,3 +1,10 @@
+@import url("//hello.myfonts.net/count/2d185a");
+
+
+@font-face {font-family: 'EurostileLT-BoldExtendedTwo';src: url('webfonts/2D185A_0_0.eot');src: url('webfonts/2D185A_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D185A_0_0.woff2') format('woff2'),url('webfonts/2D185A_0_0.woff') format('woff'),url('webfonts/2D185A_0_0.ttf') format('truetype');}
+
+
+
 html {
   font-size: 100%;
   overflow-y: scroll;
@@ -6,7 +13,7 @@ html {
   -webkit-text-size-adjust: none;
 }
 body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
+body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #fff; }
 
 a { color: #12C; }
 a:visited { color: #61C; }
@@ -18,15 +25,18 @@ pre, code { font-family: monospace, monospace; font-size: 1em; }
 ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
 img { border: 0; max-width: 100%; }
 
-body { background: #fff; }
+body { background: #000; }
 header, footer, .container { max-width: 45em; margin: 0 auto; }
 
-header { padding: 0 0.5em; color: #C90B0B; }
+header { padding: 0 0.5em; color: #00FFFF; font-family: EurostileLT-BoldExtendedTwo;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;}
 header img { border-radius: 40px; float: left; }
 header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
 header p span { font-size: 0.8em; font-weight: normal;}
 
-.hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+.hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em; color:#000;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
 }
