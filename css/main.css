@@ -90,13 +90,12 @@ h1.title {
   text-align: right; }
 
 .score-container, .best-container {
-  font-family: EurostileLT-BoldExtendedTwo;
   position: relative;
   display: inline-block;
   background: rgba(216,144,0,1);
   padding: 15px 25px;
-  font-size: 20px;
-  height: 20px;
+  font-size: 25px;
+  height: 25px;
   line-height: 47px;
   font-weight: bold;
   border-radius: 3px;
@@ -986,7 +985,7 @@ a.learn:hover, a.keep-playing-button:hover, a.learn-low:hover {
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #bbb;
   line-height: 42px;
   cursor: pointer;
   display: block;
