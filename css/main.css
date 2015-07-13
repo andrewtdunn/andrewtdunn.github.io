@@ -1,5 +1,6 @@
 @import url(fonts/clear-sans.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700");
+@font-face {font-family: 'EurostileLT-BoldExtendedTwo';src: url('webfonts/2D185A_0_0.eot');src: url('webfonts/2D185A_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D185A_0_0.woff2') format('woff2'),url('webfonts/2D185A_0_0.woff') format('woff'),url('webfonts/2D185A_0_0.ttf') format('truetype');}
 
 body {
   margin: 80px 0; }
@@ -52,11 +53,12 @@ input {
   clear: both; }
 
 h1.title {
-  font-size: 55px;
+  font-size: 35px;
   font-weight: medium;
   margin: 0;
   display: block;
-  float: left; }
+  float: left;
+   font-family: EurostileLT-BoldExtendedTwo;}
 
 @-webkit-keyframes move-up {
   0% {
@@ -83,16 +85,18 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 .scores-container {
+
   float: right;
   text-align: right; }
 
 .score-container, .best-container {
+  font-family: EurostileLT-BoldExtendedTwo;
   position: relative;
   display: inline-block;
-  background: #0c92bf;
+  background: rgba(216,144,0,1);
   padding: 15px 25px;
-  font-size: 25px;
-  height: 25px;
+  font-size: 20px;
+  height: 20px;
   line-height: 47px;
   font-weight: bold;
   border-radius: 3px;
@@ -211,6 +215,7 @@ hr {
   box-sizing: border-box; }
 
 .game-message {
+  font-family: EurostileLT-BoldExtendedTwo;
   display: none;
   position: absolute;
   top: 0;
@@ -228,11 +233,12 @@ hr {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both; }
   .game-message p {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
-    height: 60px;
-    line-height: 60px;
-    margin-top: 222px; }
+    height: 55px;
+    line-height: 55px;
+    margin-top: 222px;
+    font-family: EurostileLT-BoldExtendedTwo;}
   .game-message .lower {
     display: block;
     margin-top: 29px; }
@@ -841,6 +847,7 @@ hr {
     font-size: 35px; }
 
   .game-message {
+    font-family: Eir
     padding-top: 0; }
     .game-message p {
       font-size: 30px !important;
@@ -973,8 +980,9 @@ a.learn:hover, a.keep-playing-button:hover, a.learn-low:hover {
   background-repeat: repeat-x;
 }
 .restart-button, a.retry-button {
+  font-family: EurostileLT-BoldExtendedTwo;
   display: inline-block;
-  background: #1e6477;
+  background: rgb(196,64,64);
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
@@ -1005,4 +1013,5 @@ a.learn-low {
 a.retry-button {
   margin-left: 10px;
   float: center;
+  margin-right: 10px;
 }
