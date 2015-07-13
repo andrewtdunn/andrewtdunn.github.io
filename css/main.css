@@ -994,6 +994,12 @@ a.learn:hover, a.keep-playing-button:hover, a.learn-low:hover {
   margin-top: 7px;
 }
 
+.restart-button:hover, a.retry-button:hover {
+  font-family: EurostileLT-BoldExtendedTwo;
+  display: inline-block;
+  background: rgb(255,64,64);
+}
+
 a.retry-button, a.learn-low {
   width: 150px;
   height: 40px;
