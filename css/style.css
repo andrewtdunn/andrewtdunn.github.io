@@ -18,7 +18,7 @@ body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; co
 a { color: #12C; }
 a:visited { color: #61C; }
 a:focus { outline: thin dotted; }
-a:hover, a:active { color: #c00; outline: 0; }
+a:hover, a:active { color: #fff; outline: 0; }
 
 b, strong { font-weight: bold; }
 pre, code { font-family: monospace, monospace; font-size: 1em; }
