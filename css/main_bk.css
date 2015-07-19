@@ -1,23 +1,27 @@
 @import url(fonts/clear-sans.css);
-@import url(fonts/scifi.css);
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #000;
-  color: #FFF;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px; }
+@import url("http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700");
+@font-face {font-family: 'EurostileLT-BoldExtendedTwo';src: url('webfonts/2D185A_0_0.eot');src: url('webfonts/2D185A_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D185A_0_0.woff2') format('woff2'),url('webfonts/2D185A_0_0.woff') format('woff'),url('webfonts/2D185A_0_0.ttf') format('truetype');}
 
 body {
   margin: 80px 0; }
 
+p.learn {
+  margin-top: 20px;
+}
+
+span.tile-text {
+  line-height: 1.25;
+}
+
+
+
 input {
   display: inline-block;
-  background: #009999;
+  background: #8f7a66;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: #f9f6f2;
   height: 40px;
   line-height: 42px;
   cursor: pointer;
@@ -34,14 +38,14 @@ input {
     cursor: auto;
     background: #fcfbf9;
     font-weight: normal;
-    color: #FFF;
+    color: #776e65;
     padding: 0 15px; }
     input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
-      color: white; }
+      color: #9d948c; }
     input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
-      color: white; }
+      color: #9d948c; }
     input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder {
-      color: white; }
+      color: #9d948c; }
 
 .heading:after {
   content: "";
@@ -50,41 +54,45 @@ input {
 
 h1.title {
   font-size: 35px;
-  font-weight: bold;
+  font-weight: medium;
   margin: 0;
   display: block;
   float: left;
-  font-family: EurostileLT-BoldExtendedTwo; }
+   font-family: EurostileLT-BoldExtendedTwo;}
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes move-up {
   0% {
     top: 25px;
     opacity: 1; }
+
   100% {
     top: -50px;
     opacity: 0; } }
-@-moz-keyframes $animation-name {
+@-moz-keyframes move-up {
   0% {
     top: 25px;
     opacity: 1; }
+
   100% {
     top: -50px;
     opacity: 0; } }
-@keyframes $animation-name {
+@keyframes move-up {
   0% {
     top: 25px;
     opacity: 1; }
+
   100% {
     top: -50px;
     opacity: 0; } }
 .scores-container {
+
   float: right;
   text-align: right; }
 
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #0FF;
+  background: rgba(216,144,0,1);
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
@@ -111,7 +119,7 @@ h1.title {
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(119, 110, 101, 0.9);
     z-index: 100;
     -webkit-animation: move-up 600ms ease-in;
     -moz-animation: move-up 600ms ease-in;
@@ -132,8 +140,7 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #FFF;
-  font-weight: bold;
+  font-weight: medium;
   text-decoration: underline;
   cursor: pointer; }
 
@@ -142,7 +149,7 @@ strong.important {
 
 hr {
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #d8d4d0;
   margin-top: 20px;
   margin-bottom: 30px; }
 
@@ -150,38 +157,44 @@ hr {
   width: 500px;
   margin: 0 auto; }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
-@-moz-keyframes $animation-name {
+@-moz-keyframes fade-in {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
-@keyframes $animation-name {
+@keyframes fade-in {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes slide-up {
   0% {
     margin-top: 32%; }
+
   100% {
     margin-top: 20%; } }
-@-moz-keyframes $animation-name {
+@-moz-keyframes slide-up {
   0% {
     margin-top: 32%; }
+
   100% {
     margin-top: 20%; } }
-@keyframes $animation-name {
+@keyframes slide-up {
   0% {
     margin-top: 32%; }
+
   100% {
     margin-top: 20%; } }
 .game-container {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -192,7 +205,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #0FF;
+  background: #00FFFF;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -201,13 +214,14 @@ hr {
   box-sizing: border-box; }
 
 .game-message {
+  font-family: EurostileLT-BoldExtendedTwo;
   display: none;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(238, 228, 218, 0.73);
+  background: rgba(150, 150, 150, 0.83);
   z-index: 100;
   padding-top: 40px;
   text-align: center;
@@ -218,11 +232,12 @@ hr {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both; }
   .game-message p {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
-    height: 60px;
-    line-height: 60px;
-    margin-top: 222px; }
+    height: 55px;
+    line-height: 55px;
+    margin-top: 222px;
+    font-family: EurostileLT-BoldExtendedTwo;}
   .game-message .lower {
     display: block;
     margin-top: 29px; }
@@ -236,11 +251,11 @@ hr {
       margin-right: 5px; }
   .game-message a {
     display: inline-block;
-    background: #009999;
+    background: #8f7a66;
     border-radius: 3px;
     padding: 0 20px;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: #f9f6f2;
     height: 40px;
     line-height: 42px;
     cursor: pointer;
@@ -253,7 +268,7 @@ hr {
     margin-left: 10px; }
   .game-message.game-won {
     background: rgba(237, 194, 46, 0.5);
-    color: rgba(255, 255, 255, 0.5); }
+    color: #f9f6f2; }
     .game-message.game-won a.keep-playing-button {
       display: inline-block; }
   .game-message.game-won, .game-message.game-over {
@@ -292,7 +307,7 @@ hr {
   margin-right: 15px;
   float: left;
   border-radius: 3px;
-  background: rgba(238, 228, 218, 0.35); }
+  background: rgba(0, 0, 0, 0.15); }
   .grid-cell:last-child {
     margin-right: 0; }
 
@@ -303,7 +318,7 @@ hr {
 .tile, .tile .tile-inner {
   width: 107px;
   height: 107px;
-  line-height: 186.25px; }
+  line-height: 116.25px; }
 .tile.tile-position-1-1 {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -379,108 +394,136 @@ hr {
   transition-property: transform; }
   .tile .tile-inner {
     border-radius: 3px;
-    font-family: EurostileLT-BoldExtendedTwo;
-    background: #eee4da;
-    text-align: right;
-    bottom: 4px;
+    background: #f5f5f5;
+    text-align: center;
     font-weight: bold;
     z-index: 10;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 25px; }
+    font-family: 'Source Code Pro', Courier;
+    font-size: 16px;
+    color: #354b59;}
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
+    background: url('../tile-sets/starTrekCharacters/jordy.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
-    background: #eee1c9;
+    background: url('../tile-sets/starTrekCharacters/data.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #f3b27a; }
+    background: url('../tile-sets/starTrekCharacters/worf.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    font-weight: medium;
+    font-size: 11px;
+  }
   .tile.tile-16 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #f69664; }
+    background: url('../tile-sets/starTrekCharacters/han.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    font-weight: medium;
+    font-size: 10px;
+  }
   .tile.tile-32 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #f77c5f; }
+    background: url('../tile-sets/starTrekCharacters/whoopi.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    font-size: 14px;
+  }
   .tile.tile-64 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #f75f3b; }
+    background: url('../tile-sets/starTrekCharacters/wilw.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
+    font-size: 14px;
+
+  }
   .tile.tile-128 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #edd073;
+    font-weight: medium;
+    background: url('../tile-sets/starTrekCharacters/uhura.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
-    font-size: 25px; }
+    font-size: 12px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
-        font-size: 15px; } }
+        font-size: 12px; } }
   .tile.tile-256 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #edcc62;
+    background: url('../tile-sets/starTrekCharacters/bones.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
-    font-size: 25px; }
+    font-size: 14px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
-        font-size: 15px; } }
+        font-size: 16px; } }
   .tile.tile-512 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #edc950;
+    background: url('../tile-sets/starTrekCharacters/spock.png');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
-    font-size: 25px; }
+    font-size: 13px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
-        font-size: 15px; } }
+        font-size: 13px; } }
   .tile.tile-1024 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #edc53f;
+    background: url('../tile-sets/starTrekCharacters/picard.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
-    font-size: 25px; }
+    font-size: 10px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
-        font-size: 15px; } }
+        font-size: 10px; } }
   .tile.tile-2048 .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #edc22e;
+    background: url('../tile-sets/starTrekCharacters/kirk.jpg');
+    background-size: 100%;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
-    font-size: 25px; }
+    font-size: 10px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
-        font-size: 15px; } }
+        font-size: 10px; } }
   .tile.tile-super .tile-inner {
-    color: rgba(255, 255, 255, 0.5);
-    background: #3c3a33;
-    font-size: 30px; }
+    color: #f9f6f2;
+    background: #3c3a32;
+    font-weight: medium;
+    font-size: 12px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
         font-size: 10px; } }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes appear {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
-@-moz-keyframes $animation-name {
+@-moz-keyframes appear {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
-@keyframes $animation-name {
+@keyframes appear {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -494,41 +537,47 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes pop {
   0% {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   50% {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2); }
+
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
-@-moz-keyframes $animation-name {
+@-moz-keyframes pop {
   0% {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   50% {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2); }
+
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
-@keyframes $animation-name {
+@keyframes pop {
   0% {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
+
   50% {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2); }
+
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -542,43 +591,20 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
+.above-game {
+  margin-top: 10px;
+}
+
 .above-game:after {
   content: "";
   display: block;
   clear: both; }
 
 .game-intro {
+  margin-top: 5px;
   float: left;
-  line-height: 42px;
+  line-height: 30px;
   margin-bottom: 0; }
-
-.restart-button {
-  display: inline-block;
-  background: #009999;
-  border-radius: 3px;
-  padding: 0 20px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  line-height: 42px;
-  cursor: pointer;
-  display: inline;
-  text-align: center;
-  float: right; }
-
-.sound-button {
-  display: inline-block;
-  background: #009999;
-  border-radius: 3px;
-  padding: 0 20px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
-  height: 40px;
-  line-height: 42px;
-  cursor: pointer;
-  display: inline;
-  text-align: center;
-  float: right; }
 
 .game-explanation {
   margin-top: 50px; }
@@ -615,12 +641,12 @@ hr {
     margin-bottom: 10px; }
 
   .game-intro {
-    width: 55%;
+    width: 100%;
     display: block;
     box-sizing: border-box;
     line-height: 1.65; }
 
-  .restart-button {
+  .restart-button, .retry-button {
     width: 42%;
     padding: 0;
     display: block;
@@ -628,9 +654,9 @@ hr {
     margin-top: 2px; }
 
   .game-container {
-    margin-top: 40px;
+    margin-top: 17px;
     position: relative;
-    padding: 15px;
+    padding: 10px;
     cursor: default;
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
@@ -639,10 +665,10 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #0FF;
+    background: #1e6477;
     border-radius: 6px;
-    width: 500px;
-    height: 500px;
+    width: 280px;
+    height: 280px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -683,11 +709,11 @@ hr {
         margin-right: 5px; }
     .game-message a {
       display: inline-block;
-      background: #009999;
+      background: #8f7a66;
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
-      color: rgba(255, 255, 255, 0.5);
+      color: #f9f6f2;
       height: 40px;
       line-height: 42px;
       cursor: pointer;
@@ -700,7 +726,7 @@ hr {
       margin-left: 10px; }
     .game-message.game-won {
       background: rgba(237, 194, 46, 0.5);
-      color: rgba(255, 255, 255, 0.5); }
+      color: #f9f6f2; }
       .game-message.game-won a.keep-playing-button {
         display: inline-block; }
     .game-message.game-won, .game-message.game-over {
@@ -725,7 +751,7 @@ hr {
     z-index: 1; }
 
   .grid-row {
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
     .grid-row:last-child {
       margin-bottom: 0; }
     .grid-row:after {
@@ -734,9 +760,9 @@ hr {
       clear: both; }
 
   .grid-cell {
-    width: 106.25px;
-    height: 106.25px;
-    margin-right: 15px;
+    width: 57.5px;
+    height: 57.5px;
+    margin-right: 10px;
     float: left;
     border-radius: 3px;
     background: rgba(238, 228, 218, 0.35); }
@@ -748,78 +774,79 @@ hr {
     z-index: 2; }
 
   .tile, .tile .tile-inner {
-    width: 107px;
-    height: 107px;
-    line-height: 186.25px; }
+    width: 58px;
+    height: 58px;
+    line-height: 67.5px; }
   .tile.tile-position-1-1 {
     -webkit-transform: translate(0px, 0px);
     -moz-transform: translate(0px, 0px);
     transform: translate(0px, 0px); }
   .tile.tile-position-1-2 {
-    -webkit-transform: translate(0px, 121px);
-    -moz-transform: translate(0px, 121px);
-    transform: translate(0px, 121px); }
+    -webkit-transform: translate(0px, 67px);
+    -moz-transform: translate(0px, 67px);
+    transform: translate(0px, 67px); }
   .tile.tile-position-1-3 {
-    -webkit-transform: translate(0px, 242px);
-    -moz-transform: translate(0px, 242px);
-    transform: translate(0px, 242px); }
+    -webkit-transform: translate(0px, 135px);
+    -moz-transform: translate(0px, 135px);
+    transform: translate(0px, 135px); }
   .tile.tile-position-1-4 {
-    -webkit-transform: translate(0px, 363px);
-    -moz-transform: translate(0px, 363px);
-    transform: translate(0px, 363px); }
+    -webkit-transform: translate(0px, 202px);
+    -moz-transform: translate(0px, 202px);
+    transform: translate(0px, 202px); }
   .tile.tile-position-2-1 {
-    -webkit-transform: translate(121px, 0px);
-    -moz-transform: translate(121px, 0px);
-    transform: translate(121px, 0px); }
+    -webkit-transform: translate(67px, 0px);
+    -moz-transform: translate(67px, 0px);
+    transform: translate(67px, 0px); }
   .tile.tile-position-2-2 {
-    -webkit-transform: translate(121px, 121px);
-    -moz-transform: translate(121px, 121px);
-    transform: translate(121px, 121px); }
+    -webkit-transform: translate(67px, 67px);
+    -moz-transform: translate(67px, 67px);
+    transform: translate(67px, 67px); }
   .tile.tile-position-2-3 {
-    -webkit-transform: translate(121px, 242px);
-    -moz-transform: translate(121px, 242px);
-    transform: translate(121px, 242px); }
+    -webkit-transform: translate(67px, 135px);
+    -moz-transform: translate(67px, 135px);
+    transform: translate(67px, 135px); }
   .tile.tile-position-2-4 {
-    -webkit-transform: translate(121px, 363px);
-    -moz-transform: translate(121px, 363px);
-    transform: translate(121px, 363px); }
+    -webkit-transform: translate(67px, 202px);
+    -moz-transform: translate(67px, 202px);
+    transform: translate(67px, 202px); }
   .tile.tile-position-3-1 {
-    -webkit-transform: translate(242px, 0px);
-    -moz-transform: translate(242px, 0px);
-    transform: translate(242px, 0px); }
+    -webkit-transform: translate(135px, 0px);
+    -moz-transform: translate(135px, 0px);
+    transform: translate(135px, 0px); }
   .tile.tile-position-3-2 {
-    -webkit-transform: translate(242px, 121px);
-    -moz-transform: translate(242px, 121px);
-    transform: translate(242px, 121px); }
+    -webkit-transform: translate(135px, 67px);
+    -moz-transform: translate(135px, 67px);
+    transform: translate(135px, 67px); }
   .tile.tile-position-3-3 {
-    -webkit-transform: translate(242px, 242px);
-    -moz-transform: translate(242px, 242px);
-    transform: translate(242px, 242px); }
+    -webkit-transform: translate(135px, 135px);
+    -moz-transform: translate(135px, 135px);
+    transform: translate(135px, 135px); }
   .tile.tile-position-3-4 {
-    -webkit-transform: translate(242px, 363px);
-    -moz-transform: translate(242px, 363px);
-    transform: translate(242px, 363px); }
+    -webkit-transform: translate(135px, 202px);
+    -moz-transform: translate(135px, 202px);
+    transform: translate(135px, 202px); }
   .tile.tile-position-4-1 {
-    -webkit-transform: translate(363px, 0px);
-    -moz-transform: translate(363px, 0px);
-    transform: translate(363px, 0px); }
+    -webkit-transform: translate(202px, 0px);
+    -moz-transform: translate(202px, 0px);
+    transform: translate(202px, 0px); }
   .tile.tile-position-4-2 {
-    -webkit-transform: translate(363px, 121px);
-    -moz-transform: translate(363px, 121px);
-    transform: translate(363px, 121px); }
+    -webkit-transform: translate(202px, 67px);
+    -moz-transform: translate(202px, 67px);
+    transform: translate(202px, 67px); }
   .tile.tile-position-4-3 {
-    -webkit-transform: translate(363px, 242px);
-    -moz-transform: translate(363px, 242px);
-    transform: translate(363px, 242px); }
+    -webkit-transform: translate(202px, 135px);
+    -moz-transform: translate(202px, 135px);
+    transform: translate(202px, 135px); }
   .tile.tile-position-4-4 {
-    -webkit-transform: translate(363px, 363px);
-    -moz-transform: translate(363px, 363px);
-    transform: translate(363px, 363px); }
+    -webkit-transform: translate(202px, 202px);
+    -moz-transform: translate(202px, 202px);
+    transform: translate(202px, 202px); }
 
   .tile .tile-inner {
     font-size: 35px; }
 
   .game-message {
+    font-family: Eir
     padding-top: 0; }
     .game-message p {
       font-size: 30px !important;
@@ -850,11 +877,11 @@ hr {
   font: inherit;
   color: inherit;
   display: inline-block;
-  background: #009999;
+  background: #8f7a66;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: #f9f6f2;
   height: 40px;
   line-height: 42px;
   cursor: pointer; }
@@ -866,11 +893,11 @@ hr {
   position: relative;
   margin-left: 10px;
   display: inline-block;
-  background: #009999;
+  background: #8f7a66;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: #f9f6f2;
   height: 40px;
   line-height: 42px;
   cursor: pointer; }
@@ -878,7 +905,7 @@ hr {
     vertical-align: -4px;
     margin-right: 8px; }
   .btc-donate a {
-    color: rgba(255, 255, 255, 0.5);
+    color: #f9f6f2;
     text-decoration: none;
     font-weight: normal; }
   .btc-donate .address {
@@ -899,7 +926,7 @@ hr {
     transition-property: top, opacity; }
     .btc-donate .address:after {
       position: absolute;
-      border-top: 10px solid #0FF;
+      border-top: 10px solid #bbada0;
       border-right: 7px solid transparent;
       border-left: 7px solid transparent;
       content: "";
@@ -907,7 +934,7 @@ hr {
       left: 50%;
       margin-left: -7px; }
     .btc-donate .address code {
-      background-color: #0FF;
+      background-color: #bbada0;
       padding: 10px 15px;
       width: 100%;
       border-radius: 3px;
@@ -931,49 +958,89 @@ hr {
         .btc-donate .address:after {
           left: 50%;
           bottom: 2px; } }
+a.learn, a.keep-playing-button {
+  background-color: #de8b3e;
+  text-decoration: none;
+  border: 1px solid;
+  border-color: #c7640b;
+  color: white;
+  border-radius: 0;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: block;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+a.learn:visited, a.keep-playing-button {
+  }
+a.learn:hover, a.keep-playing-button:hover, a.learn-low:hover {
+  background-image: linear-gradient(to bottom,#f59a18 0,#f27d13 100%);
+  background-repeat: repeat-x;
+}
+.restart-button, a.retry-button {
+  font-family: EurostileLT-BoldExtendedTwo;
+  display: inline-block;
+  background: rgb(196,64,64);
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #bbb;
+  line-height: 42px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  float: right;
+  margin-top: 7px;
+}
+
+.restart-button:hover, a.retry-button:hover {
+  font-family: EurostileLT-BoldExtendedTwo;
+  display: inline-block;
+  background: rgb(255,64,64);
+}
+
+a.retry-button, a.learn-low {
+  width: 150px;
+  height: 40px;
+  padding: 0;
+  border-radius: 0;
+  background-color:black;
+  display: inline-block;
+  margin: 0;
+  line-height: 42px;
+}
+
+a.learn-low {
+  margin-right: 10px;
+}
+
+a.retry-button {
+  margin-left: 10px;
+  float: center;
+  margin-right: 10px;
+}
 
 .tile.tile-2 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/jordy.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/jordy.jpg'); }
 .tile.tile-4 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/data.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/data.jpg'); }
 .tile.tile-8 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/worf.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/worf.jpg');}
 .tile.tile-16 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/han.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/han.jpg'); }
 .tile.tile-32 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/whoopi.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/whoopi.jpg');
+  }
 .tile.tile-64 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/wilw.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/wilw.jpg');}
 .tile.tile-128 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/uhura.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/uhura.jpg'); }
 .tile.tile-256 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/bones.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/bones.jpg'); }
 .tile.tile-512 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/spock.png");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/spock.png');}
 .tile.tile-1024 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/picard.jpg");
-  background-size: 100%; }
-
+    background: url('../tile-sets/starTrekCharacters/picard.jpg'); }
 .tile.tile-2048 .tile-inner {
-  background: url("../tile-sets/starTrekCharacters/kirk.jpg");
-  background-size: 100%; }
-
-/*# sourceMappingURL=main.css.map */
+    background: url('../tile-sets/starTrekCharacters/kirk.jpg'); }

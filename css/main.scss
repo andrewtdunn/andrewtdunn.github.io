@@ -1,5 +1,6 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
+@import "fonts/scifi.css";
 
 $field-width: 500px;
 $grid-spacing: 15px;
@@ -9,15 +10,15 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: #FFF;
+$bright-text-color: rgba(255,255,255,.5);
 
 $tile-color: #eee4da;
 $tile-gold-color: #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0;
+$game-container-background: #0FF;
 
 $transition-speed: 100ms;
 
@@ -25,7 +26,7 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: #000;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -90,11 +91,12 @@ input {
 }
 
 h1.title {
-  font-size: 80px;
+  font-size: 35px;
   font-weight: bold;
   margin: 0;
   display: block;
   float: left;
+  font-family:EurostileLT-BoldExtendedTwo;
 }
 
 @include keyframes(move-up) {
@@ -374,7 +376,7 @@ hr {
     &, .tile-inner {
       width: ceil($tile-size);
       height: ceil($tile-size);
-      line-height: $tile-size + 10px;
+      line-height: $tile-size + 80px;
     }
 
     // Build position classes
@@ -398,13 +400,14 @@ hr {
 
   .tile-inner {
     border-radius: $tile-border-radius;
-
+    font-family:EurostileLT-BoldExtendedTwo;
     background: $tile-color;
-    text-align: center;
+    text-align: right;
+    bottom: 4px;
     font-weight: bold;
     z-index: 10;
-
-    font-size: 55px;
+    color:rgba(255,255,255,.5);
+    font-size: 25px;
   }
 
   // Movement transition
@@ -465,14 +468,14 @@ hr {
 
       // Adjust font size for bigger numbers
       @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+        font-size: 25px;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
-          font-size: 25px;
+          font-size: 15px;
         }
       } @else if $power >= 1000 {
-        font-size: 35px;
+        font-size: 25px;
 
         @include smaller($mobile-threshold) {
           font-size: 15px;
@@ -545,7 +548,14 @@ hr {
 
 .restart-button {
   @include button;
-  display: block;
+  display: inline;
+  text-align: center;
+  float: right;
+}
+
+.sound-button {
+  @include button;
+  display: inline;
   text-align: center;
   float: right;
 }
@@ -771,3 +781,38 @@ hr {
     }
   }
 }
+
+.tile.tile-2 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/jordy.jpg');
+    background-size: 100%; }
+.tile.tile-4 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/data.jpg');
+    background-size: 100%;}
+.tile.tile-8 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/worf.jpg');
+    background-size: 100%;}
+.tile.tile-16 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/han.jpg');
+    background-size: 100%;}
+.tile.tile-32 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/whoopi.jpg');
+    background-size: 100%;
+  }
+.tile.tile-64 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/wilw.jpg');
+    background-size: 100%;}
+.tile.tile-128 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/uhura.jpg');
+    background-size: 100%; }
+.tile.tile-256 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/bones.jpg');
+    background-size: 100%;}
+.tile.tile-512 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/spock.png');
+    background-size: 100%;}
+.tile.tile-1024 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/picard.jpg');
+    background-size: 100%; }
+.tile.tile-2048 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/kirk.jpg');
+    background-size: 100%;}
