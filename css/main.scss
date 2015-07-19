@@ -2,7 +2,7 @@
 @import "fonts/clear-sans.css";
 @import "fonts/scifi.css";
 
-$field-width: 500px;
+$field-width: 280px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
@@ -587,7 +587,7 @@ hr {
   }
 
   h1.title {
-    font-size: 27px;
+    font-size: 18px;
     margin-top: 15px;
   }
 
@@ -608,7 +608,7 @@ hr {
 
   // Show intro and restart button side by side
   .game-intro {
-    width: 55%;
+    width: 100%;
     display: block;
     box-sizing: border-box;
     line-height: 1.65;
