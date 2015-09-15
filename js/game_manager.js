@@ -34,6 +34,8 @@ GameManager.prototype.clearAll = function () {
 // Return true if the game is lost, or has won and the user hasn't kept playing
 GameManager.prototype.isGameTerminated = function () {
   if (this.over || (this.won && !this.keepPlaying)) {
+    var endSound = new Audio('sounds/ClosingCredits.mp3')
+    endSound.play();
     return true;
   } else {
     return false;
@@ -148,6 +150,8 @@ GameManager.prototype.move = function (direction) {
   var traversals = this.buildTraversals(vector);
   var moved      = false;
 
+  var highestMergeValue = 0;
+
   // Save the current tile positions and remove merger information
   this.prepareTiles();
 
@@ -163,6 +167,7 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
+
           var merged = new Tile(positions.next, tile.value * 2);
           merged.mergedFrom = [tile, next];
 
@@ -171,9 +176,15 @@ GameManager.prototype.move = function (direction) {
 
           // Converge the two tiles' positions
           tile.updatePosition(positions.next);
-
+          console.log("merged value is: " + merged.value);
           // Update the score
           self.score += merged.value;
+
+          if (merged.value > highestMergeValue){
+            highestMergeValue = merged.value;
+          }
+
+
 
           // The mighty 2048 tile
           if (merged.value === 2048) self.won = true;
@@ -190,8 +201,60 @@ GameManager.prototype.move = function (direction) {
 
   if (moved) {
     this.addRandomTile();
+    console.log("highestMergeValue" + highestMergeValue);
+
+    switch(highestMergeValue){
+      case 0:
+        var moveSound = new Audio('sounds/tos-turboliftdoor.mp3');
+        moveSound.play();
+        break;
+      case 4:
+       var mergeSound1 = new Audio('sounds/tos-computer-01.mp3');
+        mergeSound1.play();
+        break;
+      case 8:
+        var mergeSound2 = new Audio('sounds/tos-computer-02.mp3');
+        mergeSound2.play();
+        break;
+      case 16:
+        var mergeSound3 = new Audio('sounds/tos-computer-03.mp3');
+        mergeSound3.play();
+        break;
+      case 32:
+        var mergeSound4 = new Audio('sounds/tos-computer-04.mp3');
+        mergeSound4.play();
+        break;
+      case 64:
+        var mergeSound5 = new Audio('sounds/tos-computer-05.mp3');
+        mergeSound5.play();
+        break;
+      case 128:
+        var mergeSound6 = new Audio('sounds/tos-computer-06.mp3');
+        mergeSound6.play();
+        break;
+      case 256:
+        var mergeSound7 = new Audio('sounds/tos-computer-07.mp3');
+        mergeSound7.play();
+        break;
+      case 512:
+        var mergeSound8 = new Audio('sounds/Spock_Livelong.mp3');
+        mergeSound8.play();
+        break;
+      case 1024:
+        var mergeSound9 = new Audio('sounds/picard26.mp3');
+        mergeSound9.play();
+        break;
+      case 2048:
+        var mergeSound10 = new Audio('sounds/Opening_Remastered.mp3');
+        mergeSound10.play();
+        break;
+
+
+    }
+
 
     if (!this.movesAvailable()) {
+
       this.over = true; // Game over!
     }
 

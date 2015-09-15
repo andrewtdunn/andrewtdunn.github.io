@@ -1,5 +1,6 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
+@import "fonts/scifi.css";
 
 $field-width: 500px;
 $grid-spacing: 15px;
@@ -9,15 +10,15 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: white;
+$bright-text-color: rgbs(255,255,255,0.9);
 
 $tile-color: #eee4da;
 $tile-gold-color: #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0;
+$game-container-background: #0FF;
 
 $transition-speed: 100ms;
 
@@ -25,14 +26,15 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: black;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 body {
   margin: 80px 0;
+  font-family:EurostileLT-BoldExtendedTwo;
 }
 
 // Styles for buttons
@@ -119,7 +121,7 @@ h1.title {
 
   position: relative;
   display: inline-block;
-  background: $game-container-background;
+  background: rgba(216,144,0,1);
   padding: 15px 25px;
   font-size: $height;
   height: $height;
@@ -218,7 +220,7 @@ hr {
 }
 
 // Game field mixin used to render CSS at different width
-@mixin game-field {
+@mixin game-field($field-width,$grid-spacing,$grid-row-cells,$tile-size,$tile-border-radius,$game-container-margin-top){
   .game-container {
     margin-top: $game-container-margin-top;
     position: relative;
@@ -374,7 +376,7 @@ hr {
     &, .tile-inner {
       width: ceil($tile-size);
       height: ceil($tile-size);
-      line-height: $tile-size + 10px;
+      line-height: $tile-size + 35px;
     }
 
     // Build position classes
@@ -391,20 +393,25 @@ hr {
 }
 
 // End of game-field mixin
-@include game-field;
+@include game-field($field-width,$grid-spacing,$grid-row-cells,$tile-size,$tile-border-radius,$game-container-margin-top);
 
 .tile {
   position: absolute; // Makes transforms relative to the top-left corner
 
   .tile-inner {
     border-radius: $tile-border-radius;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
 
     background: $tile-color;
-    text-align: center;
+    text-align: right;
+    padding-right:5px;
     font-weight: bold;
     z-index: 10;
 
     font-size: 55px;
+    color: rgba($text-color,0.8);
   }
 
   // Movement transition
@@ -469,13 +476,13 @@ hr {
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
-          font-size: 25px;
+          font-size: 12px;
         }
       } @else if $power >= 1000 {
         font-size: 35px;
 
         @include smaller($mobile-threshold) {
-          font-size: 15px;
+          font-size: 12px;
         }
       }
     }
@@ -545,6 +552,7 @@ hr {
 
 .restart-button {
   @include button;
+  text-transform: uppercase;
   display: block;
   text-align: center;
   float: right;
@@ -584,7 +592,8 @@ hr {
 
   h1.title {
     font-size: 27px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 
   .container {
@@ -592,11 +601,17 @@ hr {
     margin: 0 auto;
   }
 
-  .score-container, .best-container {
-    margin-top: 0;
-    padding: 15px 10px;
-    min-width: 40px;
+  .scores-container{
+    width:100%;
+    .score-container, .best-container {
+      margin-top: 0;
+      padding: 15px 10px;
+      min-width: 60px;
+    }
   }
+
+
+
 
   .heading {
     margin-bottom: 10px;
@@ -608,10 +623,11 @@ hr {
     display: block;
     box-sizing: border-box;
     line-height: 1.65;
+    float:right;
   }
 
   .restart-button {
-    width: 42%;
+    width: 100%;
     padding: 0;
     display: block;
     box-sizing: border-box;
@@ -619,11 +635,11 @@ hr {
   }
 
   // Render the game field at the right width
-  @include game-field;
+  @include game-field($field-width,$grid-spacing,$grid-row-cells,$tile-size,$tile-border-radius,$game-container-margin-top);
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
-    font-size: 35px;
+    font-size: 12px;
   }
 
   .game-message {
@@ -738,7 +754,7 @@ hr {
       font-weight: normal;
       font-size: 15px;
       font-family: Consolas, "Liberation Mono", Courier, monospace;
-      text-align: center;
+      text-align: right;
 
     }
   }
@@ -771,3 +787,38 @@ hr {
     }
   }
 }
+
+.tile.tile-2 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/jordy.jpg');
+    background-size: 100%; }
+.tile.tile-4 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/data.jpg');
+    background-size: 100%;}
+.tile.tile-8 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/worf.jpg');
+    background-size: 100%;}
+.tile.tile-16 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/han.jpg');
+    background-size: 100%;}
+.tile.tile-32 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/whoopi.jpg');
+    background-size: 100%;
+  }
+.tile.tile-64 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/wilw.jpg');
+    background-size: 100%;}
+.tile.tile-128 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/uhura.jpg');
+    background-size: 100%; }
+.tile.tile-256 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/bones.jpg');
+    background-size: 100%;}
+.tile.tile-512 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/spock.png');
+    background-size: 100%;}
+.tile.tile-1024 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/picard.jpg');
+    background-size: 100%; }
+.tile.tile-2048 .tile-inner {
+    background: url('../tile-sets/starTrekCharacters/kirk.jpg');
+    background-size: 100%;}
