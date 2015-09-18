@@ -12,6 +12,7 @@
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/print.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
 
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -28,26 +29,95 @@
   <body>
     <header>
       <a href="/"><img src="img/profilepic.jpg"></a>
-      <p>Cameron Pittman<br><span>Course Developer</span></p>
+      <p>Andrew Dunn<br><span>Internet Developer</span></p>
     </header>
 
     <div class="container">
       <div class="hero">
-        <strong>2048 is awesome!</strong> I loved making my own 2048 with Andy and Sarah. Below, I'm showing off a screenshot from the Udacity version of 2048.
+        <strong>2048 is awesome!</strong> I loved making my own 2048 with Andy and Sarah.
       </div>
 
-      <div class="content">
+      <div id="st2048" class="content">
 
-        <img class="img-responsive" src="http://cameronwp.github.io/udportfolio/img/2048.png">
+      <div class="container container-2048">
+    <div class="heading">
+      <h1 class="title">ST-2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
 
-        <p>Bacon ipsum dolor sit amet et pork belly porchetta excepteur dolor, laborum laboris magna labore dolore in fugiat beef ribs. Fugiat leberkas nulla do kevin dolore. Flank hamburger dolor swine prosciutto sirloin pig jerky sunt consequat pariatur. Mollit meatloaf nostrud laboris shoulder excepteur velit officia meatball nisi turkey. Nulla jowl spare ribs, et drumstick magna frankfurter.</p>
+    <div class="above-game">
+      <p class="game-intro">
+      <a class="restart-button">New Game</a>
+    </div>
 
-        <p>Venison spare ribs dolor tri-tip duis turkey. Ut chicken proident ribeye est flank, sed frankfurter. Kielbasa exercitation ullamco leberkas. Landjaeger turkey culpa, tail short loin consectetur salami venison in corned beef eiusmod qui ad leberkas. Tri-tip adipisicing frankfurter ut sirloin rump consectetur. Chuck sint filet mignon labore eiusmod nulla. Venison shankle pork, consectetur nisi bacon spare ribs anim meatball sausage ball tip labore aute reprehenderit adipisicing.</p>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="retry-button">Play Again</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same value touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <p>
+    This is a modified version of the <a href="http://gabrielecirulli.github.io/2048/" target="_blank">original game</a> created by Gabriele Cirulli.
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
 
     </div>
 
     <footer>
-      <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+      <p>&copy; Web Performance 2015 <span id="crp-stats"></span></p>
     </footer>
   </body>
 </html>
