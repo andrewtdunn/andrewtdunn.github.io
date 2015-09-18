@@ -17,7 +17,7 @@ $tile-color: #eee4da;
 $tile-gold-color: #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
-$game-container-margin-top: 40px;
+$game-container-margin-top: 20px;
 $game-container-background: #0FF;
 
 $transition-speed: 100ms;
@@ -29,11 +29,11 @@ html, body {
   background: black;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 body {
-  margin: 80px 0;
+  margin: 40px 0;
   font-family:EurostileLT-BoldExtendedTwo;
 }
 
@@ -92,7 +92,7 @@ input {
 }
 
 h1.title {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
   display: block;
@@ -376,7 +376,7 @@ hr {
     &, .tile-inner {
       width: ceil($tile-size);
       height: ceil($tile-size);
-      line-height: $tile-size + 35px;
+      line-height: $tile-size + 80px;
     }
 
     // Build position classes
@@ -410,7 +410,7 @@ hr {
     font-weight: bold;
     z-index: 10;
 
-    font-size: 55px;
+    font-size: 25px;
     color: rgba($text-color,0.8);
   }
 
@@ -472,14 +472,14 @@ hr {
 
       // Adjust font size for bigger numbers
       @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+        font-size: 25px;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
           font-size: 12px;
         }
       } @else if $power >= 1000 {
-        font-size: 35px;
+        font-size: 25px;
 
         @include smaller($mobile-threshold) {
           font-size: 12px;
@@ -495,7 +495,7 @@ hr {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
 
-    font-size: 30px;
+    font-size: 25px;
 
     @include smaller($mobile-threshold) {
       font-size: 10px;
@@ -545,9 +545,10 @@ hr {
 }
 
 .game-intro {
-  float: left;
+  float: right;
   line-height: 42px;
   margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .restart-button {
@@ -614,7 +615,7 @@ hr {
 
 
   .heading {
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
   }
 
   // Show intro and restart button side by side
@@ -640,6 +641,7 @@ hr {
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
     font-size: 12px;
+    line-height: $tile-size + 40px;
   }
 
   .game-message {
