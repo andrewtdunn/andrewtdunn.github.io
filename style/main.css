@@ -587,11 +587,10 @@ hr {
 
 @media screen and (max-width: 520px) {
   html, body {
-    font-size: 15px; }
+    font-size: 12px; }
 
   body {
-    margin: 20px 0;
-    padding: 0 20px; }
+    margin: 20px 0; }
 
   h1.title {
     font-size: 27px;
@@ -607,7 +606,8 @@ hr {
     .scores-container .score-container, .scores-container .best-container {
       margin-top: 0;
       padding: 15px 10px;
-      min-width: 60px; }
+      min-width: 60px;
+      font-size: 0.8em; }
 
   .game-intro {
     width: 55%;
@@ -910,7 +910,7 @@ hr {
       border-radius: 3px;
       line-height: 1;
       font-weight: normal;
-      font-size: 15px;
+      font-size: 12px;
       font-family: Consolas, "Liberation Mono", Courier, monospace;
       text-align: right; }
   .btc-donate:hover .address, .btc-donate .address:hover .address {

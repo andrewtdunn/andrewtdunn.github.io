@@ -588,12 +588,12 @@ hr {
   $game-container-margin-top: 17px;
 
   html, body {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   body {
     margin: 20px 0;
-    padding: 0 20px;
+    //padding: 0 20px;
   }
 
   h1.title {
@@ -614,6 +614,7 @@ hr {
       margin-top: 0;
       padding: 15px 10px;
       min-width: 60px;
+      font-size: 0.8em;
     }
   }
 
@@ -760,7 +761,7 @@ hr {
       border-radius: 3px;
       line-height: 1;
       font-weight: normal;
-      font-size: 15px;
+      font-size: 12px;
       font-family: Consolas, "Liberation Mono", Courier, monospace;
       text-align: right;
 
