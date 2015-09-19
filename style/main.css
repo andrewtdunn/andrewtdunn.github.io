@@ -571,7 +571,8 @@ hr {
   text-transform: uppercase;
   display: block;
   text-align: center;
-  float: right; }
+  float: right;
+  font-size: 0.8em; }
 
 .game-explanation {
   margin-top: 50px; }
