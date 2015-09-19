@@ -106,6 +106,7 @@ h1.title {
     text-align: center;
     color: #eee4da; }
   .score-container .score-addition, .best-container .score-addition {
+    display: none;
     position: absolute;
     right: 30px;
     color: red;
