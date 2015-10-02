@@ -600,13 +600,11 @@ hr {
     width: 280px;
     margin: 0 auto; }
 
-  .scores-container {
-    width: 100%; }
-    .scores-container .score-container, .scores-container .best-container {
-      margin-top: 0;
-      padding: 15px 10px;
-      min-width: 60px;
-      font-size: 0.8em; }
+  .scores-container .score-container, .scores-container .best-container {
+    margin-top: 0;
+    padding: 15px 10px;
+    min-width: 60px;
+    font-size: 0.8em; }
 
   .game-intro {
     width: 55%;
