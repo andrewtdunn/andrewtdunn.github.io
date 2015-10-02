@@ -593,9 +593,8 @@ hr {
     margin: 20px 0; }
 
   h1.title {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 5px; }
+    font-size: 12px;
+    margin: 0px; }
 
   .container {
     width: 280px;
