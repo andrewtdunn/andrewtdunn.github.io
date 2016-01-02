@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ngrok', '–save-dev' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/package.json
+5 verbose installManyTop reading scoped package data from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/node_modules/grunt-pagespeed/package.json
+6 verbose installManyTop reading scoped package data from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/node_modules/install/package.json
+7 verbose installManyTop reading scoped package data from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/node_modules/load-grunt-tasks/package.json
+8 verbose installManyTop reading scoped package data from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/node_modules/npm/package.json
+9 verbose readDependencies loading dependencies from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/package.json
+10 silly cache add args [ 'ngrok', null ]
+11 verbose cache add spec ngrok
+12 silly cache add args [ '–save-dev', null ]
+13 verbose cache add spec –save-dev
+14 silly cache add parsed spec { raw: 'ngrok',
+14 silly cache add   scope: null,
+14 silly cache add   name: null,
+14 silly cache add   rawSpec: 'ngrok',
+14 silly cache add   spec: '/Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok',
+14 silly cache add   type: 'local' }
+15 silly cache add parsed spec { raw: '–save-dev',
+15 silly cache add   scope: null,
+15 silly cache add   name: null,
+15 silly cache add   rawSpec: '–save-dev',
+15 silly cache add   spec: '/Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/–save-dev',
+15 silly cache add   type: 'local' }
+16 error addLocal Could not install /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/–save-dev
+17 silly addLocalTarball shasum (computed) 80af30f837cc77ab944a172fedffa89f5d9ff8c0
+18 verbose addTmpTarball /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok not in flight; adding
+19 verbose addTmpTarball validating metadata from /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok
+20 verbose tar unpack /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok
+21 verbose tar unpacking to /var/folders/nh/ws91glf94qxgvsn0knyg3jpm0000gn/T/npm-3964-df2822c6/unpack-0dd594becf08
+22 silly gentlyRm /var/folders/nh/ws91glf94qxgvsn0knyg3jpm0000gn/T/npm-3964-df2822c6/unpack-0dd594becf08 is being purged
+23 verbose gentlyRm don't care about contents; nuking /var/folders/nh/ws91glf94qxgvsn0knyg3jpm0000gn/T/npm-3964-df2822c6/unpack-0dd594becf08
+24 silly gunzTarPerm modes [ '755', '644' ]
+25 error not a package /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok
+26 error addLocal Could not install /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/ngrok
+27 verbose stack Error: ENOENT, open '/Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/–save-dev'
+27 verbose stack     at Error (native)
+28 verbose cwd /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio
+29 error Darwin 14.1.0
+30 error argv "node" "/usr/local/bin/npm" "install" "ngrok" "–save-dev"
+31 error node v0.12.7
+32 error npm  v2.11.3
+33 error path /Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/–save-dev
+34 error code ENOENT
+35 error errno -2
+36 error enoent ENOENT, open '/Users/andrewdunn/Dev/udacity/nanoFE/optimize_your_portfolio_2/frontend-nanodegree-mobile-portfolio/–save-dev'
+36 error enoent This is most likely not a problem with npm itself
+36 error enoent and is related to npm not being able to find a file.
+37 verbose exit [ -2, true ]
