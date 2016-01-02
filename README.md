@@ -1,8 +1,4 @@
-README
-
-Andrew Dunn
-
-##My modifications
+##Andrew Dunn: modifications
 
 I spent most of my time modifying the 2048 game to a star trek theme. Please play with it and let me know what you think. Its really cooler when you get to the higher levels
 
