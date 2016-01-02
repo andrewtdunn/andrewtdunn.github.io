@@ -450,12 +450,26 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+    console.log("size");
+    var newPizzaWidth;
+    switch(size) {
+      case "1":
+        newPizzaWidth = 25;
+        break;
+      case "2":
+        newPizzaWidth = 33.3;
+        break;
+      case "3":
+        newPizzaWidth = 50;
+        break;
+      default:
+        console.log("bug in sizer");
+    }
     // create array only once, outside of loop
     var pizzaContainers = document.querySelectorAll(".randomPizzaContainer");
     for (var i = 0; i < pizzaContainers.length; i++) {
-      var dx = determineDx(pizzaContainers[i], size);
-      var newwidth =(pizzaContainers[i].offsetWidth + dx) + 'px';
-      pizzaContainers[i].style.width = newwidth;
+      // uses percent not px, requiring less calculation
+      pizzaContainers[i].style.width = newPizzaWidth + "%";
     }
   }
 

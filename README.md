@@ -1,3 +1,22 @@
+README
+
+Andrew Dunn
+
+##My modifications
+
+I spent most of my time modifying the 2048 game to a star trek theme. Please play with it and let me know what you think. Its really cooler when you get to the higher levels
+
+re: page speed optimization. this works at +90 when I run on github.io. when I run on my localhost and use ngrok it asks for server optimizations (i.e. modifying the SimpleHTTPServer to cache image requests, etc. ) This might be outside the scope of the lesson, so I thought that if it runs ok on github.io then that is good enough.
+
+re: page scrolling. fixed bottleneck in page scrolling by refactoring and removing the expensive sine calculation in the for loop
+
+re: resizing pizzas. per the example in the class, just resized using percent rather than the too-complex px conversion.
+
+I didn't do a radical redesign because it wasn't really close to anything I'd want to use as my portfolio. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
+
+
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -32,7 +51,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
