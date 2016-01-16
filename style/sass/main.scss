@@ -1,6 +1,6 @@
 @import "helpers";
-@import "fonts/clear-sans.css";
-@import "fonts/scifi.css";
+@import "../fonts/clear-sans.css";
+@import "../fonts/scifi.css";
 
 $field-width: 500px;
 $grid-spacing: 15px;
@@ -797,36 +797,36 @@ hr {
 }
 
 .tile.tile-2 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/jordy.jpg');
+    background: url('../../tile-sets/starTrekCharacters/jordy.jpg');
     background-size: 100%; }
 .tile.tile-4 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/data.jpg');
+    background: url('../../tile-sets/starTrekCharacters/data.jpg');
     background-size: 100%;}
 .tile.tile-8 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/worf.jpg');
+    background: url('../../tile-sets/starTrekCharacters/worf.jpg');
     background-size: 100%;}
 .tile.tile-16 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/han.jpg');
+    background: url('../../tile-sets/starTrekCharacters/han.jpg');
     background-size: 100%;}
 .tile.tile-32 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/whoopi.jpg');
+    background: url('../../tile-sets/starTrekCharacters/whoopi.jpg');
     background-size: 100%;
   }
 .tile.tile-64 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/wilw.jpg');
+    background: url('../../tile-sets/starTrekCharacters/wilw.jpg');
     background-size: 100%;}
 .tile.tile-128 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/uhura.jpg');
+    background: url('../../tile-sets/starTrekCharacters/uhura.jpg');
     background-size: 100%; }
 .tile.tile-256 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/bones.jpg');
+    background: url('../../tile-sets/starTrekCharacters/bones.jpg');
     background-size: 100%;}
 .tile.tile-512 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/spock.png');
+    background: url('../../tile-sets/starTrekCharacters/spock.png');
     background-size: 100%;}
 .tile.tile-1024 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/picard.jpg');
+    background: url('../../tile-sets/starTrekCharacters/picard.jpg');
     background-size: 100%; }
 .tile.tile-2048 .tile-inner {
-    background: url('../tile-sets/starTrekCharacters/kirk.jpg');
+    background: url('../../tile-sets/starTrekCharacters/kirk.jpg');
     background-size: 100%;}
