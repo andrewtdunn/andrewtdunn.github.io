@@ -18,16 +18,13 @@ body, button, input, select, textarea {
 
 a {
   color: #12C; }
-
-a:visited {
-  color: #61C; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:hover, a:active {
-  color: #c00;
-  outline: 0; }
+  a:visited {
+    color: #61C; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    color: #c00;
+    outline: 0; }
 
 b, strong {
   font-weight: bold; }
@@ -57,19 +54,16 @@ header {
   color: #0FF;
   font-family: EurostileLT-BoldExtendedTwo;
   text-transform: uppercase; }
-
-header img {
-  border-radius: 40px;
-  float: left; }
-
-header p {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-left: 4em; }
-
-header p span {
-  font-size: 0.8em;
-  font-weight: normal; }
+  header img {
+    border-radius: 40px;
+    float: left; }
+  header p {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 4em; }
+    header p span {
+      font-size: 0.8em;
+      font-weight: normal; }
 
 .hero {
   padding: 2em;
@@ -82,25 +76,22 @@ header p span {
 .content {
   padding: 1em 1em; }
 
-.content li {
+li {
   list-style-type: none;
   font-size: 1.1em; }
-
-li img {
-  float: left;
-  padding-right: 1em; }
-
-li p {
-  font-size: 0.9em;
-  font-style: italic; }
+  li img {
+    float: left;
+    padding-right: 1em; }
+  li p {
+    font-size: 0.9em;
+    font-style: italic; }
 
 footer {
   padding: 0 0.5em;
   border-top: 1px solid #ccc; }
-
-footer span {
-  float: right;
-  font-style: italic; }
+  footer span {
+    float: right;
+    font-style: italic; }
 
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) {

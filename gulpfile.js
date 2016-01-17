@@ -1,14 +1,16 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
+var gulp = require('gulp'),
+sass = require('gulp-sass'),
+autoprefixer = require('gulp-autoprefixer'),
+watch = require('gulp-watch');
 
 gulp.task('default', function(){
-    console.log('hello world!');
+    gulp.watch('./style/sass/*.scss',['styles']);
 });
 
 
 gulp.task('styles', function() {
-    gulp.src('./style/sass/*.scss')
+    console.log("executing styles");
+    gulp.src('./style/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
