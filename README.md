@@ -15,8 +15,8 @@ I didn't do a radical redesign because it wasn't really close to anything I'd wa
 
 - install node.js and npm
 ```bash
-1. how to install npm on a mac[http://blog.teamtreehouse.com/install-node-js-npm-mac]
-2. how to install npm on a pc[http://blog.teamtreehouse.com/install-node-js-npm-windows]
+1. [how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
+2. [how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 ```
 - install gulp in your project devDependencies
 ```bash
