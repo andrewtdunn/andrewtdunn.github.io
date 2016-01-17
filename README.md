@@ -13,28 +13,37 @@ I didn't do a radical redesign because it wasn't really close to anything I'd wa
 
 ##Dependencies
 
-install gulp in your project devDependencies
+- install node.js and npm
+1. how to install npm on a mac[http://blog.teamtreehouse.com/install-node-js-npm-mac]
+2. how to install npm on a pc[http://blog.teamtreehouse.com/install-node-js-npm-windows]
+- install gulp in your project devDependencies
 ```bash
 $> npm install --save-dev gulp
 ```
-install gulp-sass
+- install gulp-sass
 ```bash
-$> npm install gulp-sass
+$> npm install --save-dev gulp-sass
 ```
-install autoprefixer
+- install gulp-watch
 ```bash
-$> npm install --global postcss-cli autoprefixer`
+$> npm install --save-dev gulp-watch
 ```
-run gulp
+- install autoprefixer
+```bash
+$> npm install --save-dev autoprefixer
+```
+- run gulp
 ```
 $> gulp
 ```
-run local server
+- run local server
 ```bash
 $> cd /path/to/your-project-folder
 $> python -m SimpleHTTPServer 8080
 ```
-Open a browser and visit localhost:8080
+- open a browser and visit localhost:8080
+
+when sass files are edited, css files are compiled. refreshing the browser makes the changes visible.
 
 
 ##Testing Page Speed

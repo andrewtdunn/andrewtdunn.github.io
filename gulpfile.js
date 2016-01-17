@@ -4,7 +4,7 @@ autoprefixer = require('gulp-autoprefixer'),
 watch = require('gulp-watch');
 
 gulp.task('default', function(){
-    gulp.watch('./style/sass/*.scss',['styles']);
+    gulp.watch('./style/sass/**/*.scss',['styles']);
 });
 
 
