@@ -1,4 +1,4 @@
-##Andrew Dunn: Modifications
+##Website Performance Optimization portfolio project
 
 I spent most of my time modifying the 2048 game to a star trek theme. Please play with it and let me know what you think. Its really cooler when you get to the higher levels
 
@@ -13,11 +13,22 @@ I didn't do a radical redesign because it wasn't really close to anything I'd wa
 
 ##Dependencies
 
-install gulp in your project devDependencies
-npm install --save-dev gulp
-npm install gulp-sass
-npm install --global postcss-cli autoprefixer
-run gulp
+1. install gulp in your project devDependencies
+```bash
+$> npm install --save-dev gulp
+```
+2. install gulp-sass
+```bash
+$> npm install gulp-sass
+```
+3. install autoprefixer
+```bash
+$> npm install --global postcss-cli autoprefixer`
+```
+4. run gulp
+```
+$> gulp
+```
 
 ```bash
 $> cd /path/to/your-project-folder
