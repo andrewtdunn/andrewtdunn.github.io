@@ -10,13 +10,26 @@ re: resizing pizzas. per the example in the class, just resized using percent ra
 
 I didn't do a radical redesign because it wasn't really close to anything I'd want to use as my portfolio. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
 
+In main.js - optimizations perk review suggestions
+- uses strict mode
+- scroll listener is refactored. Instead of calling updatePositions, it calls requestAnimateFrame(updatePositions), to update the scroll position at the start of each frame.
+- replaces document.querySelector() with document.getElementById()
+- replaces document.querySelectorAll() with document.getElementsByClassName()
+- in for loop, change assign array length to a variable. question though - is this a micro-optimization? the js compiler may not care how the array length is declared
+- declares pizzaDivs outside of for loop
+- adjust sin functionality to adjust pizza movement (note: more instruction here of the expected behavior would have been helpful)
+- creates elem variable outside of for loop
+- creates moving pizzas outside of for loop
+- determines the number of rows of background pizzas by screenheight
+- updates number of rows on window resize
+
 
 ##Dependencies
 
 - install node.js and npm
 ```bash
-1. [how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
-2. [how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows)
+- [how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
+- [how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 ```
 - install gulp in your project devDependencies
 ```bash
@@ -34,15 +47,19 @@ $> npm install --save-dev gulp-watch
 ```bash
 $> npm install --save-dev autoprefixer
 ```
+- install browser-sync
+```bash
+$> npm install browser-sync --save-dev
+```
+- install gulp-eslint
+```bash
+$> npm install gulp-eslint
+```
 - run gulp
 ```
 $> gulp
 ```
-- run local server
-```bash
-$> cd /path/to/your-project-folder
-$> python -m SimpleHTTPServer 8080
-```
+- sass should compile on change + save and reload in browser
 - open a browser and visit localhost:8080
 
 when sass files are edited, css files are compiled. refreshing the browser makes the changes visible.
