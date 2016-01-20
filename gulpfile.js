@@ -39,11 +39,15 @@ gulp.task('scripts', function(){
     gulp.src('src/views/js/**/*.js')
         .pipe(gulp.dest('./dist/views/js'));
 });
-gulp.task('scripts-dlst', function(){
+
+gulp.task('scripts-dist', function(){
     gulp.src('src/js/**/*.js')
-        //.pipe(concat('all.js'))
-       // .pipe(uglify())
+        //pipe(concat('all.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
+    gulp.src('src/views/js/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/views/js'));
 });
 
 gulp.task('copy-images', function(){

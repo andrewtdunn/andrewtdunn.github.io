@@ -24,7 +24,7 @@ In main.js - optimizations perk review suggestions
 - updates number of rows on window resize
 
 
-##Dependencies
+##Dependencies for Development
 
 - install node.js and npm
 ```bash
@@ -49,7 +49,7 @@ $> npm install --save-dev autoprefixer
 ```
 - install browser-sync
 ```bash
-$> npm install browser-sync --save-dev
+$> npm installs --save-dev browser-sync
 ```
 - install gulp-eslint
 ```bash
@@ -60,17 +60,31 @@ $> npm install gulp-eslint
 $> gulp
 ```
 - sass should compile on change + save and reload in browser
+- html change also triggers reload
 - open a browser and visit localhost:8080
-
-when sass files are edited, css files are compiled. refreshing the browser makes the changes visible.
 
 
 ##Testing Page Speed
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
+1. cd  main directory, run gulp dist
 
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok 8080
+  ```bash
+  $> gulp dist
   ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+1. Run on a local server
+
+  ```bash
+  $> cd dist
+  $> python -m SimpleHTTPServer 8080
+  ```
+
+
+1. Download and install ngrok to make your local server accessible remotely.
+
+  ``` bash
+  $> npm install -g ngrok
+  $> cd dist
+  $> ngrok http 8080
+  ```
+
+1. Copy the public URL ngrok gives you ("forwarding " url) and run it through PageSpeed Insights
