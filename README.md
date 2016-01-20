@@ -24,7 +24,7 @@ In main.js - optimizations per review suggestions
 - declares pizzaDivs outside of for loop
 - adjust sin functionality to adjust pizza movement (note: more description here of the expected behavior would have been helpful, although it is hard to describe)
 - creates elem variable outside of for loop
-- creates moving pizzas outside of for loop
+- creates movingPizzas var outside of for loop
 - determines the number of rows of background pizzas by screenheight
 - updates number of rows on window resize
 
