@@ -9,7 +9,7 @@ I spent most of my time modifying the 2048 game to a star trek theme. Please pla
 
 re: resizing pizzas. per the example in the class, just resized using percent rather than the too-complex px conversion.
 
-I didn't do a radical redesignin the interest of time but I am working on my portfolio.
+I didn't do a radical redesign in the interest of time but I am working on my portfolio.
 
 note on pizza.html. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
 
@@ -46,6 +46,7 @@ $> gulp
 ```
 - sass should compile on change + save and reload in browser
 - html change also triggers reload
+- Edit files in the *src* folder not the *dist* folder!
 
 ##Deploying to gh-pages
 ```bash
@@ -78,4 +79,4 @@ $> gulp deploy
   $> ngrok http 8080
   ```
 
-1. Copy the public URL ngrok gives you ("forwarding " url) and run it through PageSpeed Insights
+1. Copy the public URL ngrok gives you ("forwarding" url) and run it through PageSpeed Insights
