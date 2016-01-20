@@ -20,9 +20,9 @@ In main.js - optimizations per review suggestions
 - scroll listener is refactored. Instead of calling updatePositions, it calls requestAnimateFrame(updatePositions), to update the scroll position at the start of each frame.
 - replaces document.querySelector() with document.getElementById()
 - replaces document.querySelectorAll() with document.getElementsByClassName()
-- in for loop, change assign array length to a variable. question though - is this a micro-optimization? the js compiler may not care how the array length is declared
+- in for loop, change assign array length to a variable. **question** - is this a micro-optimization? the js compiler may not care how the array length is declared
 - declares pizzaDivs outside of for loop
-- adjust sin functionality to adjust pizza movement (note: more instruction here of the expected behavior would have been helpful)
+- adjust sin functionality to adjust pizza movement (note: more description here of the expected behavior would have been helpful, although it is hard to describe)
 - creates elem variable outside of for loop
 - creates moving pizzas outside of for loop
 - determines the number of rows of background pizzas by screenheight
