@@ -79,4 +79,4 @@ $> gulp deploy
   $> ngrok http 8080
   ```
 
-1. Copy the public URL ngrok gives you ("forwarding" url) and run it through PageSpeed Insights
+1. Copy the public URL ngrok gives you ("forwarding" url) and run it through [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
