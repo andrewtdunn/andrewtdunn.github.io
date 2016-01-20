@@ -2,7 +2,7 @@
 
 [Deployed Project](http://andrewtdunn.github.io/)
 
-To test the Google Page Insights of a deployed dist project -
+To test the Google Page Insights of a deployed project -
 [Google Page Insights](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fandrewtdunn.github.io%2F&tab=mobile)
 
 Note: this is the development branch. The master branch only includes the contents of the dist folder.
@@ -15,7 +15,7 @@ I didn't do a radical redesign in the interest of time but I am working on my po
 
 note on pizza.html. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
 
-In main.js - optimizations perk review suggestions
+In main.js - optimizations per review suggestions
 - uses strict mode
 - scroll listener is refactored. Instead of calling updatePositions, it calls requestAnimateFrame(updatePositions), to update the scroll position at the start of each frame.
 - replaces document.querySelector() with document.getElementById()
@@ -48,7 +48,7 @@ $> gulp
 ```
 - sass should compile on change + save and reload in browser
 - html change also triggers reload
-- Edit files in the *src* folder not the *dist* folder!
+- Edit files in the **src** folder not the **dist** folder!
 
 ##Deploying to gh-pages
 ```bash
