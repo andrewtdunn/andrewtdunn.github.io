@@ -49,8 +49,13 @@ $> gulp
 - sass should compile on change + save and reload in browser
 - html change also triggers reload
 - Edit files in the **src** folder not the **dist** folder!
+- work in **development** branch and push to remote repository like so:
+```bash
+$> git push origin development
+```
 
 ##Deploying to gh-pages
+The gulp deploy command deploys  the dist folder to the master branch. The master branch is served by github.io
 ```bash
 $> gulp dist
 $> gulp deploy
