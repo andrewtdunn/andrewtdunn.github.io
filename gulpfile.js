@@ -6,7 +6,8 @@ browserSync = require('browser-sync').create(),
 eslint = require('gulp-eslint'),
 jasmine = require('gulp-jasmine-phantom'),
 concat = require('gulp-concat'),
-uglify = require('gulp-uglify');
+uglify = require('gulp-uglify'),
+ghPages = require('gulp-gh-pages');
 
 //gulp.task('default', ['serve']);
 
@@ -109,5 +110,12 @@ gulp.task('tests', function(){
         .pipe(jasmine({
             integration: true,
             vendor: 'js/**/*.js'
+        }));
+});
+
+gulp.task('deploy', function(){
+   return gulp.src('./dist/**/*')
+        .pipe(ghPages({
+                branch: "master"
         }));
 });
