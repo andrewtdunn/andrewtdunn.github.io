@@ -4,9 +4,12 @@ autoprefixer = require('gulp-autoprefixer'),
 watch = require('gulp-watch'),
 browserSync = require('browser-sync').create(),
 eslint = require('gulp-eslint'),
+jasmine = require('gulp-jasmine-phantom'),
 concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
-ghPages = require('gulp-gh-pages');
+ghPages = require('gulp-gh-pages'),
+babel = require('gulp-babel');
+
 
 //gulp.task('default', ['serve']);
 
@@ -34,6 +37,7 @@ gulp.task('dist', [
 
 gulp.task('scripts', function(){
     gulp.src('src/js/**/*.js')
+        .pipe(babel())
         //.pipe(concat('all.js'))
         .pipe(gulp.dest('./dist/js'));
     gulp.src('src/views/js/**/*.js')
@@ -42,6 +46,7 @@ gulp.task('scripts', function(){
 
 gulp.task('scripts-dist', function(){
     gulp.src('src/js/**/*.js')
+        .pipe(babel())
         //pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
