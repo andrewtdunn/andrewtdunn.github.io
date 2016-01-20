@@ -8,7 +8,9 @@ jasmine = require('gulp-jasmine-phantom'),
 concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
 ghPages = require('gulp-gh-pages'),
-babel = require('gulp-babel');
+babel = require('gulp-babel'),
+imagemin = require('gulp-imagemin'),
+pngquant = require('imagemin-pngquant');
 
 
 //gulp.task('default', ['serve']);
@@ -57,10 +59,22 @@ gulp.task('scripts-dist', function(){
 
 gulp.task('copy-images', function(){
     gulp.src('src/img/**')
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest('dist/img'));
     gulp.src('src/tile-sets/starTrekCharacters/*')
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest('dist/img/starTrekCharacters'));
     gulp.src('src/views/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest('dist/views/images'));
 
 });
