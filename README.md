@@ -34,11 +34,11 @@ In main.js - optimizations per review suggestions
 Note: I tried using gulp-concat to compress the 2048 javascript files but it altered the js functionality and the game wouldn't run. Maybe there are options which I can use to configure gulp-concat.
 
 - install node.js and npm
-[install node](https://nodejs.org/en/)
-[how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
-[how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows)
+[install node](https://nodejs.org/en/).
+[how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac).
+[how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows).
 
-- install devDependencies. Install each of the following packages (gulp, gulp-sass, gulp-watch, autoprefixer, browser-sync, gulp-eslint, gulp-jasmine-phantom, gulp-concat, gulp-uglify, gulp-babel, gulp-imagemin, imagemin-pngquant, gulp-gh-pages) with the following npm command:
+- install devDependencies. cd to main directory (which has the gulpfile). Install each of the following packages (gulp, gulp-sass, gulp-watch, autoprefixer, browser-sync, gulp-eslint, gulp-jasmine-phantom, gulp-concat, gulp-uglify, gulp-babel, gulp-imagemin, imagemin-pngquant, gulp-gh-pages) with the following npm command:
 ```bash
 $> npm install --save-dev package_name
 ```
