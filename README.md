@@ -1,14 +1,17 @@
 ##Website Performance Optimization portfolio project
 
+To test the Google Page Insights of a deployed dist project -
+[Google Page Insights](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fandrewtdunn.github.io%2F&tab=mobile)
+
+Note: this is the development branch. The master branch only includes the contents of the dist folder.
+
 I spent most of my time modifying the 2048 game to a star trek theme. Please play with it and let me know what you think. Its really cooler when you get to the higher levels
-
-re: page speed optimization. this works at +90 when I run on github.io. when I run on my localhost and use ngrok it asks for server optimizations (i.e. modifying the SimpleHTTPServer to cache image requests, etc. ) This might be outside the scope of the lesson, so I thought that if it runs ok on github.io then that is good enough.
-
-re: page scrolling. fixed bottleneck in page scrolling by refactoring and removing the expensive sine calculation in the for loop
 
 re: resizing pizzas. per the example in the class, just resized using percent rather than the too-complex px conversion.
 
-I didn't do a radical redesign because it wasn't really close to anything I'd want to use as my portfolio. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
+I didn't do a radical redesignin the interest of time but I am working on my portfolio.
+
+note on pizza.html. The use of the slider on the pizza resizing page is really confusing and bad ux design. There's no reason to use a slider when there are only three discrete sizes.
 
 In main.js - optimizations perk review suggestions
 - uses strict mode
@@ -26,45 +29,34 @@ In main.js - optimizations perk review suggestions
 
 ##Dependencies for Development
 
+Note: I tried using gulp-concat to compress the 2048 javascript files but it altered the js functionality and the game wouldn't run. Maybe there are options which I can use to configure gulp-concat.
+
 - install node.js and npm
 ```bash
 - [how to install npm on a mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
 - [how to install npm on a pc](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 ```
-- install gulp in your project devDependencies
+- install gulp in your project devDependencies. Install the following packages (gulp, gulp-sass, gulp-watch, autoprefixer, browser-sync, gulp-eslint, gulp-jasmine-phantom, gulp-concat, gulp-uglify, gulp-gh-pages) with the following npm command:
 ```bash
-$> npm install --save-dev gulp
-```
-- install gulp-sass
-```bash
-$> npm install --save-dev gulp-sass
-```
-- install gulp-watch
-```bash
-$> npm install --save-dev gulp-watch
-```
-- install autoprefixer
-```bash
-$> npm install --save-dev autoprefixer
-```
-- install browser-sync
-```bash
-$> npm installs --save-dev browser-sync
-```
-- install gulp-eslint
-```bash
-$> npm install gulp-eslint
+$> npm install --save-dev package_name
 ```
 - run gulp
 ```
 $> gulp
 ```
-- sass should compile on change + save and reload in browser
+- sass should compile on change + save and reload in browser\
 - html change also triggers reload
-- open a browser and visit localhost:8080
+
+##Deploying to gh-pages
+```bash
+$> gulp dist
+$> gulp deploy
+```
 
 
-##Testing Page Speed
+
+
+##Testing Page Speed During Development
 1. cd  main directory, run gulp dist
 
   ```bash

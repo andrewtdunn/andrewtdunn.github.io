@@ -4,7 +4,6 @@ autoprefixer = require('gulp-autoprefixer'),
 watch = require('gulp-watch'),
 browserSync = require('browser-sync').create(),
 eslint = require('gulp-eslint'),
-jasmine = require('gulp-jasmine-phantom'),
 concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
 ghPages = require('gulp-gh-pages');
