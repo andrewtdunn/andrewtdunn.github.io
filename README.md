@@ -1,5 +1,7 @@
 ##Website Performance Optimization portfolio project
 
+[Deployed Project](http://andrewtdunn.github.io/)
+
 To test the Google Page Insights of a deployed dist project -
 [Google Page Insights](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fandrewtdunn.github.io%2F&tab=mobile)
 
