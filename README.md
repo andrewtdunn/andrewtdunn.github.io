@@ -54,7 +54,7 @@ $> gulp
 $> git push origin development
 ```
 
-##Deploying to gh-pages
+## Deploying to gh-pages
 The gulp deploy command deploys  the dist folder to the master branch. The master branch is served by github.io
 ```bash
 $> gulp dist
@@ -62,7 +62,7 @@ $> gulp deploy
 ```
 
 
-##Testing Page Speed During Development
+## Testing Page Speed During Development
 1. Build dist
 
   ```bash
