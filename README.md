@@ -1,4 +1,4 @@
-##Website Performance Optimization portfolio project
+## Website Performance Optimization portfolio project
 
 [Deployed Project](http://andrewtdunn.github.io/)
 
